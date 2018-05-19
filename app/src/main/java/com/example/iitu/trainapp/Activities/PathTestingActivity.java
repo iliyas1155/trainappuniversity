@@ -58,6 +58,8 @@ public class PathTestingActivity extends BaseActivity {
         resCoeffEditText = findViewById(R.id.path_test_res_coeff_edit_text);
         startPathTestButton = findViewById(R.id.path_test_start_button);
 
+        chart.setVisibility(View.GONE);
+
         getDbPathVerticalData(testingPath);
     }
 
@@ -70,6 +72,7 @@ public class PathTestingActivity extends BaseActivity {
                 mass = Double.parseDouble(massEditText.getText().toString());
                 resCoeff = Double.parseDouble(resCoeffEditText.getText().toString());
                 refreshChartData();
+                chart.setVisibility(View.VISIBLE);
             }
         });
     }
