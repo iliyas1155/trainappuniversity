@@ -27,7 +27,9 @@
 
             <Button
                 android:id="@+id/about_button"
-                android:background="@color/colorAccent"
+                style="@android:style/Widget.Holo.Light.Button.Toggle"
+                android:backgroundTint="@android:color/white"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -37,7 +39,9 @@
 
             <Button
                 android:id="@+id/paths_button"
-                android:background="@color/colorAccent"
+                style="@android:style/Widget.Holo.Light.Button.Toggle"
+                android:backgroundTint="@android:color/white"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/about_button"
@@ -47,7 +51,9 @@
 
             <Button
                 android:id="@+id/sequenses_button"
-                android:background="@color/colorAccent"
+                style="@android:style/Widget.Holo.Light.Button.Toggle"
+                android:backgroundTint="@android:color/white"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/paths_button"

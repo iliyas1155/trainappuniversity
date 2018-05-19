@@ -52,6 +52,8 @@
 
             <Button
                 android:id="@+id/optimize_sequence_button"
+                style="@android:style/Widget.Holo.Light.Button.Toggle"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/rv_vagons_settable"
