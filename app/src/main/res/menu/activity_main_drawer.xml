@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/menu_top"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/nav_paths"
+            android:title="@string/paths" />
+        <item
+            android:id="@+id/nav_formulas"
+            android:title="@string/formulas" />
+        <item
+            android:id="@+id/nav_about"
+            android:title="@string/about" />
+    </group>
+
+    <group
+        android:id="@+id/menu_middle"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_settings"
+            android:title="@string/settings" />
+        <item
+            android:id="@+id/nav_support"
+            android:title="@string/support" />
+    </group>
+
+</menu>

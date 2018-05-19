@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TrainApp</string>
+    <string name="paths">Направления</string>
+    <string name="frequency">Частота</string>
+    <string name="formulas">Формулы</string>
+    <string name="support">Помощь</string>
+    <string name="settings">Настройки</string>
+    <string name="home">Главная</string>
+    <string name="about">О приложении</string>
+    <string-array name="languages">
+        <item>Русский</item>
+        <item>Английский</item>
+    </string-array>
+    <string name="activate_changes">Обновить</string>
+</resources>

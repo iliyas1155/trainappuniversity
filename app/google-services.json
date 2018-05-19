@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "254254900800",
+    "firebase_url": "https://trains-diplom.firebaseio.com",
+    "project_id": "trains-diplom",
+    "storage_bucket": "trains-diplom.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:254254900800:android:77607d5cb5aef8cc",
+        "android_client_info": {
+          "package_name": "com.example.iitu.trainApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "254254900800-6iu46djtaibh4n1v62biudjvpm8jmbe7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBCsUvU78pGuex13xspzrcuGkCrdBlUGQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
