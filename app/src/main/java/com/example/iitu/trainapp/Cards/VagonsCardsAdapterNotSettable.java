@@ -29,7 +29,7 @@ public class VagonsCardsAdapterNotSettable extends RecyclerView.Adapter<VagonsCa
     public void onBindViewHolder(VagonViewHolderNotSettable vagonVHolder, int i) {
         String massStr;
         Double mass = vagons.get(i).mass;
-        if(mass%1==0d){
+        if(mass != null && mass%1==0d){
             massStr = Math.round(mass)+"";
         }else {
             massStr = mass == null ? "" : (mass + "");
