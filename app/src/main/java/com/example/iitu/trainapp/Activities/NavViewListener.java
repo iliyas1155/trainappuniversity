@@ -10,40 +10,52 @@ import android.view.MenuItem;
 
 import com.example.iitu.trainapp.R;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class NavViewListener implements NavigationView.OnNavigationItemSelectedListener{
     Context context;
     DrawerLayout drawer;
+    Map<Integer, Class> activities;
+
     public NavViewListener(Context context, DrawerLayout drawer){
         this.context = context;
         this.drawer = drawer;
+        this.activities = new HashMap<>();
+        init();
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
+        int selectedId = getSelectedId();
 
-        if (id == R.id.nav_home) {
-            Intent myIntent = new Intent(context, MainMenuActivity.class);
-            context.startActivity(myIntent);
-        }
-        if (id == R.id.nav_paths) {
-            Intent myIntent = new Intent(context, PathsActivity.class);
-            context.startActivity(myIntent);
-        }
-        if (id == R.id.nav_formulas) {
-            Intent myIntent = new Intent(context, FormulasActivity.class);
-            context.startActivity(myIntent);
-        }
-        if (id == R.id.nav_about) {
-            Intent myIntent = new Intent(context, AboutActivity.class);
-            context.startActivity(myIntent);
-        }
-        if (id == R.id.nav_settings) {
-            Intent myIntent = new Intent(context, SettingsActivity.class);
-            context.startActivity(myIntent);
+        for (Map.Entry<Integer, Class> activity : activities.entrySet()) {
+            if (activity.getKey() == id && activity.getKey() != selectedId) {
+                Intent startActivity = new Intent(context, activity.getValue());
+                context.startActivity(startActivity);
+                break;
+            }
         }
 
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void init() {
+        activities.put(R.id.nav_home,     MainMenuActivity.class);
+        activities.put(R.id.nav_paths,    PathsActivity.class);
+        activities.put(R.id.nav_formulas, FormulasActivity.class);
+        activities.put(R.id.nav_about,    AboutActivity.class);
+        activities.put(R.id.nav_settings, SettingsActivity.class);
+    }
+
+    private int getSelectedId() {
+        for (Map.Entry<Integer, Class> activity : activities.entrySet()) {
+            if (activity.getValue().isInstance(context)) {
+                return activity.getKey();
+            }
+        }
+        return -1;
     }
 }
