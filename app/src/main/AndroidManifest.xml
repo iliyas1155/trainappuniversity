@@ -26,7 +26,8 @@
         <activity android:name=".Activities.SequensesRandomActivity" />
         <activity android:name=".Activities.FormulasActivity" />
         <activity android:name=".Activities.BaseActivity" />
-        <activity android:name=".Activities.SettingsActivity"></activity>
+        <activity android:name=".Activities.SettingsActivity" />
+        <activity android:name=".Activities.WhatWeDoActivity"></activity>
     </application>
 
 </manifest>
