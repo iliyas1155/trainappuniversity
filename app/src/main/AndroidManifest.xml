@@ -10,25 +10,51 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.MainActivity">
+        <activity
+            android:name=".Activities.MainActivity"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activities.PathsActivity" />
-        <activity android:name=".Activities.PathTestingActivity" />
-        <activity android:name=".Activities.PathMenuActivity" />
-        <activity android:name=".Activities.MainMenuActivity" />
-        <activity android:name=".Activities.SequensesMenuActivity" />
-        <activity android:name=".Activities.AboutActivity" />
-        <activity android:name=".Activities.SequensesCustomActivity" />
-        <activity android:name=".Activities.SequensesRandomActivity" />
-        <activity android:name=".Activities.FormulasActivity" />
-        <activity android:name=".Activities.BaseActivity" />
-        <activity android:name=".Activities.SettingsActivity" />
-        <activity android:name=".Activities.WhatWeDoActivity"></activity>
+        <activity
+            android:name=".Activities.PathsActivity"
+            android:label="@string/paths" />
+        <activity
+            android:name=".Activities.PathTestingActivity"
+            android:label="@string/path_testing" />
+        <activity
+            android:name=".Activities.PathMenuActivity"
+            android:label="@string/path" />
+        <activity
+            android:name=".Activities.MainMenuActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".Activities.SequensesMenuActivity"
+            android:label="@string/sequences" />
+        <activity
+            android:name=".Activities.AboutActivity"
+            android:label="@string/about" />
+        <activity
+            android:name=".Activities.SequensesCustomActivity"
+            android:label="@string/sequence_custom" />
+        <activity
+            android:name=".Activities.SequensesRandomActivity"
+            android:label="@string/sequence_random" />
+        <activity
+            android:name=".Activities.FormulasActivity"
+            android:label="@string/formulas" />
+        <activity
+            android:name=".Activities.BaseActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".Activities.SettingsActivity"
+            android:label="@string/settings" />
+        <activity
+            android:name=".Activities.WhatWeDoActivity"
+            android:label="@string/what_we_do" />
     </application>
 
 </manifest>
