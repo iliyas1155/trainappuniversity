@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.iitu.trainapp.Cards.Path;
 import com.example.iitu.trainapp.R;
@@ -58,14 +59,14 @@ public class PathTestingActivity extends BaseActivity {
         resCoeffEditText = findViewById(R.id.path_test_res_coeff_edit_text);
         startPathTestButton = findViewById(R.id.path_test_start_button);
 
-        chart.setVisibility(View.GONE);
+        chart.setVisibility(View.INVISIBLE);
 
         getDbPathVerticalData(testingPath);
     }
 
     private void setActivityData(){
         pathName.setText(testingPath.name);
-        pathDesc.setText("Above you can see graph of pressure index changing by position of path." + testingPath.vertical_data.size());
+        pathDesc.setText("Above you can see graph of pressure index changing by position of path. " + testingPath.vertical_data.size());
         startPathTestButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -115,6 +116,9 @@ public class PathTestingActivity extends BaseActivity {
         lineData.addDataSet(lineVagonDataSet);
         lineData.addDataSet(linePathDataSet);
 
+        chart.setBackground(getDrawable(R.drawable.white_rounded_shape));
+        chart.setExtraOffsets(8, 16, 8, 16);
+        chart.getDescription().setEnabled(false);
         chart.animateX(3000);
         chart.setData(lineData);
         chart.invalidate();

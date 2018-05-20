@@ -34,7 +34,9 @@
                 android:layout_marginTop="28dp"
                 android:ems="10"
                 android:hint="amount of vagons"
-                android:inputType="number" />
+                android:inputType="number"
+                android:padding="8dp"
+                android:background="@drawable/white_rounded_shape" />
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/rv_vagons_settable"
@@ -43,7 +45,8 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/amount_of_vagons"
-                android:layout_marginHorizontal="@dimen/cardview_default_elevation"
+                android:layout_marginLeft="@dimen/card_side_margin"
+                android:layout_marginRight="@dimen/card_side_margin"
                 android:layout_marginTop="28dp"
                 android:orientation="horizontal"
                 android:visibility="invisible">
@@ -69,7 +72,8 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/optimize_sequence_button"
-                android:layout_marginHorizontal="@dimen/cardview_default_elevation"
+                android:layout_marginLeft="@dimen/card_side_margin"
+                android:layout_marginRight="@dimen/card_side_margin"
                 android:layout_marginTop="17dp"
                 android:orientation="horizontal"
                 android:visibility="invisible">

@@ -72,14 +72,14 @@ public class SequensesRandomActivity extends BaseActivity {
         for(int i=0; i<numberOfVagons; i++){
             vagons.add(new Vagon(i+1,Math.random()*10+1));
         }
-        VagonsCardsAdapterNotSettable adapter = new VagonsCardsAdapterNotSettable(vagons);
+        VagonsCardsAdapterNotSettable adapter = new VagonsCardsAdapterNotSettable(vagons, false);
         vagonsRv.setAdapter(adapter);
         vagonsRv.setVisibility(View.VISIBLE);
         optimizeButton.setVisibility(View.VISIBLE);
     }
 
     private void initializeOptimizedVagonsRecyclerView() {
-        VagonsCardsAdapterNotSettable adapter = new VagonsCardsAdapterNotSettable(vagonsOptimized);
+        VagonsCardsAdapterNotSettable adapter = new VagonsCardsAdapterNotSettable(vagonsOptimized, true);
         vagonsOptimizedRv.setAdapter(adapter);
         vagonsOptimizedRv.setVisibility(View.VISIBLE);
     }

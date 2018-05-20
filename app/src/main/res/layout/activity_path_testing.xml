@@ -33,56 +33,62 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dip" />
 
-            <Button
-                android:id="@+id/path_test_start_button"
-                style="@android:style/Widget.Holo.Light.Button.Toggle"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/path_test_chart"
+                android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
-                android:text="Button"
-                tools:text="start path test" />
+                android:padding="8dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:background="@drawable/white_rounded_shape">
 
-            <EditText
-                android:id="@+id/path_test_mass_edit_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/path_test_start_button"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="15dp"
-                android:ems="10"
-                android:hint="mass"
-                android:inputType="numberDecimal" />
+                <TextView
+                    android:id="@+id/testing_path_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:gravity="center"
+                    android:text="TextView" />
 
-            <TextView
-                android:id="@+id/testing_path_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:text="TextView" />
+                <TextView
+                    android:id="@+id/testing_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:gravity="center"
+                    android:text="TextView" />
 
-            <TextView
-                android:id="@+id/testing_description"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@+id/testing_path_name"
-                android:layout_marginTop="22dp"
-                android:text="TextView" />
+                <EditText
+                    android:id="@+id/path_test_res_coeff_edit_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:ems="10"
+                    android:hint="res coeff"
+                    android:inputType="numberDecimal" />
 
-            <EditText
-                android:id="@+id/path_test_res_coeff_edit_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/path_test_mass_edit_text"
-                android:layout_alignLeft="@+id/path_test_mass_edit_text"
-                android:layout_alignStart="@+id/path_test_mass_edit_text"
-                android:ems="10"
-                android:hint="res coeff"
-                android:inputType="numberDecimal" />
+                <EditText
+                    android:id="@+id/path_test_mass_edit_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:ems="10"
+                    android:hint="mass"
+                    android:inputType="numberDecimal" />
+
+                <Button
+                    android:id="@+id/path_test_start_button"
+                    style="@android:style/Widget.Holo.Light.Button.Toggle"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="Test"
+                    tools:text="start path test" />
+
+            </LinearLayout>
 
         </RelativeLayout>
     </LinearLayout>

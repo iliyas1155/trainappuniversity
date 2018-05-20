@@ -1,5 +1,6 @@
 package com.example.iitu.trainapp.Cards;
 
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,15 +9,19 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.iitu.trainapp.R;
+import com.example.iitu.trainapp.Utils.Utils;
+import com.squareup.okhttp.internal.Util;
 
 import java.util.List;
 
 public class VagonsCardsAdapterNotSettable extends RecyclerView.Adapter<VagonsCardsAdapterNotSettable.VagonViewHolderNotSettable>{
 
     public List<Vagon> vagons;
+    private boolean isOptimized;
 
-    public VagonsCardsAdapterNotSettable(List<Vagon> vagons){
+    public VagonsCardsAdapterNotSettable(List<Vagon> vagons, boolean isOptimized) {
         this.vagons = vagons;
+        this.isOptimized = isOptimized;
     }
     @Override
     public VagonViewHolderNotSettable onCreateViewHolder(ViewGroup viewGroup, int i) {
@@ -37,6 +42,11 @@ public class VagonsCardsAdapterNotSettable extends RecyclerView.Adapter<VagonsCa
         String idStr = vagons.get(i).id+"";
         vagonVHolder.vagonMass.setText(massStr);
         vagonVHolder.vagonId.setText(idStr);
+
+        if (!isOptimized) {
+            vagonVHolder.vagonCv.setCardBackgroundColor(ContextCompat.getColor(vagonVHolder.vagonCv.getContext(), R.color.rose));
+            vagonVHolder.vagonCv.setRadius(Utils.convertDpToPx(vagonVHolder.vagonCv.getContext(), 16));
+        }
 
         // update MyCustomEditTextListener every time we bind a new item
         // so that it knows what item in vagons to update

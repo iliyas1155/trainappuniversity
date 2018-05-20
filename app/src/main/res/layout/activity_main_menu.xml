@@ -68,8 +68,12 @@
                 android:layout_above="@+id/sequenses_button"
                 android:layout_centerHorizontal="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginBottom="16dp"
-                android:text="TextView" />
+                android:layout_marginBottom="32dp"
+                android:padding="8dp"
+                android:gravity="center"
+                android:text="TextView"
+                android:textColor="@android:color/black"
+                android:background="@drawable/white_rounded_shape" />
         </RelativeLayout>
     </LinearLayout>
     <android.support.design.widget.NavigationView

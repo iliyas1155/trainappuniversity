@@ -100,7 +100,7 @@ public class SequensesCustomActivity extends BaseActivity {
     }
 
     private void initializeOptimizedVagonsRecyclerView() {
-        VagonsCardsAdapterNotSettable adapter = new VagonsCardsAdapterNotSettable(vagonsOptimized);
+        VagonsCardsAdapterNotSettable adapter = new VagonsCardsAdapterNotSettable(vagonsOptimized, true);
         vagonsOptimizedRv.setAdapter(adapter);
         vagonsOptimizedRv.setVisibility(View.VISIBLE);
     }
