@@ -69,6 +69,12 @@ public class PathTestingActivity extends BaseActivity {
         startPathTestButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (massEditText.getText().toString().isEmpty()
+                        || resCoeffEditText.getText().toString().isEmpty()) {
+                    Toast.makeText(PathTestingActivity.this, "Please, fill the calculation data.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 mass = Double.parseDouble(massEditText.getText().toString());
                 resCoeff = Double.parseDouble(resCoeffEditText.getText().toString());
                 refreshChartData();
