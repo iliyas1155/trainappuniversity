@@ -51,7 +51,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
                     style="@android:style/Widget.Holo.Light.Button.Toggle"
-                    android:backgroundTint="@android:color/white"
+                    android:background="@color/colorTransparent"
                     android:text="@string/activate_changes"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -61,7 +61,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
                     style="@android:style/Widget.Holo.Light.Button.Toggle"
-                    android:backgroundTint="@android:color/white"
+                    android:background="@color/colorTransparent"
                     android:text="@string/about"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
             </LinearLayout>

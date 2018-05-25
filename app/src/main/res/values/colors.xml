@@ -3,6 +3,7 @@
     <color name="colorPrimary">#5e8891</color>
     <color name="colorPrimaryDark">#5e8891</color>
     <color name="colorAccent">#e348676e</color>
+    <color name="colorTransparent">#bfF0FFF0</color>
 
     <color name="rose">#e6fff0f5</color>
     <color name="mint">#e6f0fff0</color>

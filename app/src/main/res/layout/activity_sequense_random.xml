@@ -5,14 +5,16 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_railways_anime"
     android:fitsSystemWindows="true"
     app:layout_collapseParallaxMultiplier="1.0"
-    android:background="@drawable/background_railways_anime"
     tools:openDrawer="start">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
@@ -21,18 +23,20 @@
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:weightSum="16">
+
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/rv_vagons_random"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="20dp"
                 android:orientation="horizontal"
-                android:visibility="invisible"
-                android:layout_weight="6">
+                android:visibility="invisible">
 
             </android.support.v7.widget.RecyclerView>
 
@@ -40,20 +44,22 @@
                 android:id="@+id/optimize_sequence_button"
                 style="@android:style/Widget.Holo.Light.Button.Toggle"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:background="@color/colorPrimaryDark"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:layout_weight="2"
+                android:background="@color/colorTransparent"
                 android:text="optimize"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:visibility="invisible"
-                android:layout_weight="2" />
+                android:visibility="invisible" />
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/rv_vagons_optimized"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20dp"
                 android:orientation="horizontal"
-                android:visibility="invisible"
-                android:layout_weight="6">
+                android:visibility="invisible">
 
             </android.support.v7.widget.RecyclerView>
 
@@ -63,12 +69,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="2"
-                android:background="@color/colorPrimaryDark"
+                android:background="@color/colorTransparent"
                 android:text="test sequence"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:visibility="invisible" />
-        </LinearLayout>
+        </RelativeLayout>
     </LinearLayout>
+
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"

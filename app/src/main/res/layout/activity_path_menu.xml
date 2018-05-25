@@ -30,6 +30,7 @@
             <Button
                 android:id="@+id/path_info_button"
                 style="@android:style/Widget.Holo.Light.Button.Toggle"
+                android:background="@color/colorTransparent"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -41,6 +42,7 @@
             <Button
                 android:id="@+id/formulas_button"
                 style="@android:style/Widget.Holo.Light.Button.Toggle"
+                android:background="@color/colorTransparent"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -52,6 +54,7 @@
             <Button
                 android:id="@+id/path_test_button"
                 style="@android:style/Widget.Holo.Light.Button.Toggle"
+                android:background="@color/colorTransparent"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -63,6 +66,7 @@
             <Button
                 android:id="@+id/what_we_do_button"
                 style="@android:style/Widget.Holo.Light.Button.Toggle"
+                android:background="@color/colorTransparent"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
