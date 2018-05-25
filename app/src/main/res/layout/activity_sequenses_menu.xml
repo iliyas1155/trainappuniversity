@@ -36,7 +36,7 @@
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="64dp"
-                android:text="random sequense" />
+                android:text="@string/sequence_random" />
 
             <Button
                 android:id="@+id/cusrom_sequense_button"
@@ -47,7 +47,7 @@
                 android:layout_above="@+id/random_sequense_button"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="36dp"
-                android:text="custom sequense" />
+                android:text="@string/sequence_custom" />
 
             <TextView
                 android:id="@+id/sequenses_introduction_text"

@@ -1,4 +1,4 @@
-package com.example.iitu.trainapp;
+package com.iitu.trainapp;
 
 import org.junit.Test;
 

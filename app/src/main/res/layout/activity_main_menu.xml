@@ -59,7 +59,7 @@
                 android:layout_above="@+id/paths_button"
                 android:layout_alignParentStart="true"
                 android:layout_marginBottom="50dp"
-                android:text="sequenses" />
+                android:text="@string/sequences" />
 
             <TextView
                 android:id="@+id/introduction_text_view"

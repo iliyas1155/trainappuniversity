@@ -13,4 +13,10 @@
         <item>Английский</item>
     </string-array>
     <string name="activate_changes">Обновить</string>
+    <string name="path">Путь</string>
+    <string name="path_testing">Тест пути</string>
+    <string name="sequences">Последовательность</string>
+    <string name="sequence_custom">Создать последовательность</string>
+    <string name="sequence_random">Случайная последовательность</string>
+    <string name="what_we_do">Что мы делаем</string>
 </resources>
