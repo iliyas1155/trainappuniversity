@@ -1,6 +1,8 @@
 package com.iitu.trainapp.Activities;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -103,5 +105,11 @@ public class SequensesCustomActivity extends BaseActivity {
         VagonsCardsAdapterNotSettable adapter = new VagonsCardsAdapterNotSettable(vagonsOptimized, true);
         vagonsOptimizedRv.setAdapter(adapter);
         vagonsOptimizedRv.setVisibility(View.VISIBLE);
+    }
+
+    private void goToTesting(){
+        Intent myIntent = new Intent(SequensesCustomActivity.this, PathTestingActivity.class);
+        myIntent.putExtra("vagons", (Parcelable) vagons);
+        SequensesCustomActivity.this.startActivity(myIntent);
     }
 }

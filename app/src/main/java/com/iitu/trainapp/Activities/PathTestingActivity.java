@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.iitu.trainapp.Cards.Path;
+import com.iitu.trainapp.Cards.Vagon;
 import com.iitu.trainapp.R;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.YAxis;
@@ -38,6 +39,7 @@ public class PathTestingActivity extends BaseActivity {
     EditText resCoeffEditText;
     Button startPathTestButton;
     Path testingPath;
+    List<Vagon> vagons;
     int testingPathPosition;
     double mass = 0;
     double resCoeff = 0;
@@ -62,6 +64,11 @@ public class PathTestingActivity extends BaseActivity {
         chart.setVisibility(View.INVISIBLE);
 
         getDbPathVerticalData(testingPath);
+
+//        vagons = getIntent().getParcelableArrayListExtra("vagons");
+//        if(vagons == null){
+//            Log.d("fuck", "vagons == null");
+//        }
     }
 
     private void setActivityData(){

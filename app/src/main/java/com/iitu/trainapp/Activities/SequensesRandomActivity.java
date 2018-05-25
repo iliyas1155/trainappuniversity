@@ -1,5 +1,6 @@
 package com.iitu.trainapp.Activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -22,6 +23,7 @@ public class SequensesRandomActivity extends BaseActivity {
     private static RecyclerView vagonsRv;
     private static RecyclerView vagonsOptimizedRv;
     Button optimizeButton;
+//    Button testButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +32,7 @@ public class SequensesRandomActivity extends BaseActivity {
         vagonsRv = findViewById(R.id.rv_vagons_random);
         vagonsOptimizedRv = findViewById(R.id.rv_vagons_optimized);
         optimizeButton = findViewById(R.id.optimize_sequence_button);
+//        testButton = findViewById(R.id.test_button);
 
         LinearLayoutManager llm1 = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         vagonsRv.setLayoutManager(llm1);
@@ -46,6 +49,13 @@ public class SequensesRandomActivity extends BaseActivity {
                 initializeOptimizedVagonsRecyclerView();
             }
         });
+//        testButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent myIntent = new Intent(SequensesRandomActivity.this, SequenceTestAcivity.class);
+//                SequensesRandomActivity.this.startActivity(myIntent);
+//            }
+//        });
     }
 
     private List<Vagon> createOptimizedSequense() {
@@ -76,6 +86,7 @@ public class SequensesRandomActivity extends BaseActivity {
         vagonsRv.setAdapter(adapter);
         vagonsRv.setVisibility(View.VISIBLE);
         optimizeButton.setVisibility(View.VISIBLE);
+//        testButton.setVisibility(View.VISIBLE);
     }
 
     private void initializeOptimizedVagonsRecyclerView() {
