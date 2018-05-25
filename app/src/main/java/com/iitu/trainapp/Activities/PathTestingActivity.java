@@ -9,6 +9,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.github.mikephil.charting.formatter.IFillFormatter;
+import com.github.mikephil.charting.interfaces.dataprovider.LineDataProvider;
+import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 import com.iitu.trainapp.Cards.Path;
 import com.iitu.trainapp.Cards.Vagon;
 import com.iitu.trainapp.R;
@@ -113,6 +116,14 @@ public class PathTestingActivity extends BaseActivity {
         linePathDataSet.setAxisDependency(YAxis.AxisDependency.LEFT);
         linePathDataSet.setDrawCircles(false);
         linePathDataSet.setDrawCircleHole(false);
+        linePathDataSet.setDrawFilled(true);
+        linePathDataSet.setFillColor(ColorTemplate.JOYFUL_COLORS[1]);
+        linePathDataSet.setFillFormatter(new IFillFormatter() {
+            @Override
+            public float getFillLinePosition(ILineDataSet dataSet, LineDataProvider dataProvider) {
+                return -1e35f; // Just min enough value.
+            }
+        });
 
         lineVagonDataSet.setColor(ColorTemplate.LIBERTY_COLORS[1]);
         lineVagonDataSet.setAxisDependency(YAxis.AxisDependency.LEFT);
