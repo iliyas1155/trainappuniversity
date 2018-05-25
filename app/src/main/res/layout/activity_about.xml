@@ -5,14 +5,16 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_railways_anime"
     android:fitsSystemWindows="true"
     app:layout_collapseParallaxMultiplier="1.0"
-    android:background="@drawable/background_railways_anime"
     tools:openDrawer="start">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
@@ -20,14 +22,43 @@
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
-        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="16dp">
+            android:padding="8dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/white_rounded_shape">
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        </RelativeLayout>
+                <ImageView
+                    android:id="@+id/about_icon"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/ic_kawaii_train"
+                    android:padding="16dp"
+                    android:background="@drawable/circle_blue"/>
+
+                <org.sufficientlysecure.htmltextview.HtmlTextView
+                    android:id="@+id/about_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/about_icon"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:padding="8dp" />
+
+            </RelativeLayout>
+
+        </ScrollView>
+
     </LinearLayout>
+
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
