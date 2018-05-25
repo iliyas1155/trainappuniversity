@@ -55,7 +55,10 @@
         <activity
             android:name=".Activities.WhatWeDoActivity"
             android:label="@string/what_we_do" />
-        <activity android:name=".Activities.SequenceTestAcivity"></activity>
+        <activity android:name=".Activities.SequenceTestAcivity" />
+        <activity
+            android:name=".Activities.SupportActivity"
+            android:label="@string/support" />
     </application>
 
 </manifest>

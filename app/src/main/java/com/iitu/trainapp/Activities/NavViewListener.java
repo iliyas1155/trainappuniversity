@@ -48,6 +48,7 @@ public class NavViewListener implements NavigationView.OnNavigationItemSelectedL
         activities.put(R.id.nav_formulas, FormulasActivity.class);
         activities.put(R.id.nav_about,    AboutActivity.class);
         activities.put(R.id.nav_settings, SettingsActivity.class);
+        activities.put(R.id.nav_support,  SupportActivity.class);
     }
 
     private int getSelectedId() {
