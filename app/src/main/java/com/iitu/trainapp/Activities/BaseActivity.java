@@ -12,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.iitu.trainapp.R;
+import com.iitu.trainapp.Utils.SharedPreferencesUtil;
 
 import java.util.Locale;
 
@@ -26,7 +27,7 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        updateLanguage();
+        setLanguage(SharedPreferencesUtil.getLanguage(this));
     }
 
     @Override
