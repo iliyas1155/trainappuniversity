@@ -76,13 +76,13 @@ public class PathTestingActivity extends BaseActivity {
 
     private void setActivityData(){
         pathName.setText(testingPath.name);
-        pathDesc.setText("Above you can see graph of pressure index changing by position of path. " + testingPath.vertical_data.size());
+        pathDesc.setText(getString(R.string.path_testing_message, testingPath.vertical_data.size()));
         startPathTestButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (massEditText.getText().toString().isEmpty()
                         || resCoeffEditText.getText().toString().isEmpty()) {
-                    Toast.makeText(PathTestingActivity.this, "Please, fill the calculation data.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(PathTestingActivity.this, R.string.path_testing_error, Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -109,8 +109,8 @@ public class PathTestingActivity extends BaseActivity {
             entriesVagon.add(new Entry(pos, pressureIndexes.get(i).floatValue()));
             pos++;
         }
-        LineDataSet linePathDataSet = new LineDataSet(entriesPath, "Path");
-        LineDataSet lineVagonDataSet = new LineDataSet(entriesVagon, "Vagon");
+        LineDataSet linePathDataSet = new LineDataSet(entriesPath, getString(R.string.path));
+        LineDataSet lineVagonDataSet = new LineDataSet(entriesVagon, getString(R.string.vagon));
 
         linePathDataSet.setColor(ColorTemplate.JOYFUL_COLORS[1]);
         linePathDataSet.setAxisDependency(YAxis.AxisDependency.LEFT);

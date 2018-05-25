@@ -21,10 +21,7 @@ public class SequensesMenuActivity extends BaseActivity {
         customSequenseB = findViewById(R.id.cusrom_sequense_button);
         introTextView = findViewById(R.id.sequenses_introduction_text);
 
-        introTextView.setText("This is sequenses menu.\n" +
-                            "Bellow you can see buttons to:\n" +
-                            "Custom: create your own sequense of vagons;\n" +
-                            "Random: get random sequense of vagons to test.");
+        introTextView.setText(R.string.sequences_intro);
         setButtonsClickable();
     }
     private void setButtonsClickable(){

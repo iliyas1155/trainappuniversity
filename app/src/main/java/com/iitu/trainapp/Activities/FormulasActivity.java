@@ -19,9 +19,9 @@ public class FormulasActivity extends BaseActivity {
         TextView textLine2 = findViewById(R.id.line2_text);
         TextView textLine3 = findViewById(R.id.line3_text);
 
-        textLine1.setText("Oscillations that occur under the influence of an external periodic force are called forced oscillations.");
-        textLine2.setText("In this case, the external force performs positive work and ensures the influx of energy to the oscillatory system. It does not allow oscillations to decay, despite the action of frictional forces.");
-        textLine3.setText("If the frequency of the external force approaches the natural frequency, there is a sharp increase in the amplitude of the forced oscillations. This phenomenon is called resonance.");
+        textLine1.setText(R.string.formula_description_1);
+        textLine2.setText(R.string.formula_description_2);
+        textLine3.setText(R.string.formula_description_3);
 
     }
 }

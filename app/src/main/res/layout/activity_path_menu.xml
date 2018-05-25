@@ -37,7 +37,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_above="@+id/formulas_button"
                 android:layout_marginBottom="16dp"
-                android:text="path info" />
+                android:text="@string/path_info" />
 
             <Button
                 android:id="@+id/formulas_button"
@@ -49,7 +49,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_above="@+id/path_test_button"
                 android:layout_marginBottom="16dp"
-                android:text="formulas" />
+                android:text="@string/formulas" />
 
             <Button
                 android:id="@+id/path_test_button"
@@ -61,7 +61,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_above="@+id/what_we_do_button"
                 android:layout_marginBottom="16dp"
-                android:text="path test" />
+                android:text="@string/path_test" />
 
             <Button
                 android:id="@+id/what_we_do_button"
@@ -73,7 +73,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_alignParentBottom="true"
                 android:layout_marginBottom="16dp"
-                android:text="what we do?" />
+                android:text="@string/what_we_do" />
 
             <TextView
                 android:id="@+id/path_name_in_menu"

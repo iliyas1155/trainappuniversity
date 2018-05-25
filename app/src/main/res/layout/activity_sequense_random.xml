@@ -48,7 +48,7 @@
                 android:layout_centerInParent="true"
                 android:layout_weight="2"
                 android:background="@color/colorTransparent"
-                android:text="optimize"
+                android:text="@string/optimize"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:visibility="invisible" />
 
@@ -70,7 +70,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="2"
                 android:background="@color/colorTransparent"
-                android:text="test sequence"
+                android:text="@string/test_sequence"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:visibility="invisible" />
         </RelativeLayout>

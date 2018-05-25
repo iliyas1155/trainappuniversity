@@ -19,4 +19,25 @@
     <string name="sequence_custom">Создать последовательность</string>
     <string name="sequence_random">Случайная последовательность</string>
     <string name="what_we_do">Что мы делаем</string>
+
+    <string name="intro">Данное приложение дает базовое представление о механике движения поездов.\nНиже расположены кнопки: направления, последовательности and информация о приложении.\nКнопка направлений открывает меню направлений.\nКнопка последовательностей открывает меню последовательностей вагонов.\nВ пункте \"О приложении\" написана подробная информация о данном приложении.</string>
+    <string name="path_testing_message">Ниже расположен график изменения индекса давления относительно позиции пути. %d</string>
+    <string name="path_testing_error">Пожалуйста, заполните данные для вычислений.</string>
+
+    <!-- todo: Сумимасен, я здесь ничего не понимаю. Переведи сам, десу. -->
+    <string name="formula_description_1">Oscillations that occur under the influence of an external periodic force are called forced oscillations.</string>
+    <string name="formula_description_2">In this case, the external force performs positive work and ensures the influx of energy to the oscillatory system. It does not allow oscillations to decay, despite the action of frictional forces.</string>
+    <string name="formula_description_3">If the frequency of the external force approaches the natural frequency, there is a sharp increase in the amplitude of the forced oscillations. This phenomenon is called resonance.</string>
+
+    <string name="sequences_intro">Это меню последовательностей.\nНиже расположены кнопки:\nСоздать последовательность: создайте свою последовательность вагонов;\Случайная последовательность: получить случайную последовательность вагонов для тестирования.</string>
+    <string name="vagon">Вагон</string>
+    <string name="path_info">Свойства пути</string>
+    <string name="path_test">Тест пути</string>
+    <string name="res_coeff">Рез. коэфф.</string>
+    <string name="mass">Масса</string>
+    <string name="test">Тест</string>
+    <string name="optimize">Оптимизировать</string>
+    <string name="test_sequence">Тестовая последовательность</string>
+    <string name="amount_of_vagons">Количество вагонов</string>
+
 </resources>

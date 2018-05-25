@@ -19,4 +19,23 @@
     </string-array>
     <string name="activate_changes">Update</string>
 
+    <string name="intro">This app gives basic introduction into trains mechanic.\nBellow you can see buttons: paths, sequenses and about.\nPaths button opens menu of paths.\nSequenses button opens menu of sequenses of vagons.\nAbout button opens detailed description of current app.</string>
+    <string name="path_testing_message">Above you can see graph of pressure index changing by position of path. %d</string>
+    <string name="path_testing_error">Please, fill the calculation data.</string>
+
+    <string name="formula_description_1">Oscillations that occur under the influence of an external periodic force are called forced oscillations.</string>
+    <string name="formula_description_2">In this case, the external force performs positive work and ensures the influx of energy to the oscillatory system. It does not allow oscillations to decay, despite the action of frictional forces.</string>
+    <string name="formula_description_3">If the frequency of the external force approaches the natural frequency, there is a sharp increase in the amplitude of the forced oscillations. This phenomenon is called resonance.</string>
+
+    <string name="sequences_intro">This is sequenses menu.\nBellow you can see buttons to:\nCustom: create your own sequense of vagons;\nRandom: get random sequense of vagons to test.</string>
+    <string name="vagon">Vagon</string>
+    <string name="path_info">path info</string>
+    <string name="path_test">path test</string>
+    <string name="res_coeff">res coeff</string>
+    <string name="mass">mass</string>
+    <string name="test">Test</string>
+    <string name="optimize">optimize</string>
+    <string name="test_sequence">test sequence</string>
+    <string name="amount_of_vagons">amount of vagons</string>
+
 </resources>

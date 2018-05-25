@@ -21,11 +21,7 @@ public class MainMenuActivity extends BaseActivity {
         aboutB = findViewById(R.id.about_button);
         introT = findViewById(R.id.introduction_text_view);
 
-        introT.setText("This app gives basic introduction into trains mechanic.\n" +
-                        "Bellow you can see buttons: paths, sequenses and about.\n" +
-                        "Paths button opens menu of paths.\n" +
-                        "Sequenses button opens menu of sequenses of vagons.\n" +
-                        "About button opens detailed description of current app.");
+        introT.setText(R.string.intro);
         setButtonsClickable();
     }
 

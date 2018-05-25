@@ -34,8 +34,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentStart="true"
-                android:layout_marginBottom="56dp"
-                android:text="about" />
+                android:layout_marginBottom="40dp"
+                android:text="@string/about" />
 
             <Button
                 android:id="@+id/paths_button"
@@ -46,8 +46,8 @@
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/about_button"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="50dp"
-                android:text="paths" />
+                android:layout_marginBottom="32dp"
+                android:text="@string/paths" />
 
             <Button
                 android:id="@+id/sequenses_button"
@@ -58,11 +58,10 @@
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/paths_button"
                 android:layout_alignParentStart="true"
-                android:layout_marginBottom="50dp"
+                android:layout_marginBottom="32dp"
                 android:text="@string/sequences" />
 
-            <TextView
-                android:id="@+id/introduction_text_view"
+            <ScrollView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/sequenses_button"
@@ -70,12 +69,23 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginBottom="32dp"
                 android:padding="8dp"
-                android:gravity="center"
-                android:text="TextView"
-                android:textColor="@android:color/black"
-                android:background="@drawable/white_rounded_shape" />
+                android:background="@drawable/white_rounded_shape">
+
+                <TextView
+                    android:id="@+id/introduction_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="TextView"
+                    android:textColor="@android:color/black" />
+
+            </ScrollView>
+
         </RelativeLayout>
+
     </LinearLayout>
+
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"

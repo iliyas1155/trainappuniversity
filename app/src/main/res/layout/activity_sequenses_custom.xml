@@ -33,7 +33,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="28dp"
                 android:ems="10"
-                android:hint="amount of vagons"
+                android:hint="@string/amount_of_vagons"
                 android:inputType="number"
                 android:padding="8dp"
                 android:background="@drawable/white_rounded_shape" />
@@ -63,7 +63,7 @@
                 android:layout_below="@+id/rv_vagons_settable"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="11dp"
-                android:text="optimize"
+                android:text="@string/optimize"
                 android:visibility="invisible" />
 
             <android.support.v7.widget.RecyclerView
