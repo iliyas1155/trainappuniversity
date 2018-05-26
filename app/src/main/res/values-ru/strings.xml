@@ -48,4 +48,10 @@
     <string name="empty_mail_error">Текст письма не может быть пустым.</string>
     <string name="support_send_mail_title">Отправить письмо&#8230;</string>
 
+    <string name="path_info_name">Наименование направления:</string>
+    <string name="path_info_length">Длина пути:</string>
+    <string name="path_info_length_value">%d км</string>
+    <!-- todo: Translate the text below. -->
+    <string name="path_info_text">Line data shown on current railway path is shown as vertical data represented as changing array of numbers. To test any vagon movement on current path you can choose Path Test and testify your custom vagon.</string>
+
 </resources>

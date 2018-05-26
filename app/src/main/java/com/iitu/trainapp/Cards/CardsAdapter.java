@@ -27,7 +27,7 @@ public class CardsAdapter extends RecyclerView.Adapter<CardsAdapter.CardViewHold
     @Override
     public void onBindViewHolder(CardViewHolder cardViewHolder, int i) {
         cardViewHolder.pathName.setText(paths.get(i).name);
-        cardViewHolder.pathLength.setText(paths.get(i).length + " km");
+        cardViewHolder.pathLength.setText(cardViewHolder.pathName.getContext().getString(R.string.path_info_length_value, paths.get(i).length));
     }
     @Override
     public int getItemCount() {

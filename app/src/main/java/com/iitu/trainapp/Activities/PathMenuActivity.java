@@ -28,6 +28,13 @@ public class PathMenuActivity extends BaseActivity {
         pathNameTextView = findViewById(R.id.path_name_in_menu);
 
         pathNameTextView.setText(PathsActivity.getPath(PathsActivity.getChosenPathPosition()).name);
+        pathInfoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(PathMenuActivity.this, PathInfoActivity.class);
+                PathMenuActivity.this.startActivity(myIntent);
+            }
+        });
         pathTestButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

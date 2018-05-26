@@ -29,14 +29,14 @@
 
     <string name="sequences_intro">This is sequenses menu.\nBellow you can see buttons to:\nCustom: create your own sequense of vagons;\nRandom: get random sequense of vagons to test.</string>
     <string name="vagon">Vagon</string>
-    <string name="path_info">path info</string>
-    <string name="path_test">path test</string>
-    <string name="res_coeff">res coeff</string>
-    <string name="mass">mass</string>
+    <string name="path_info">Path info</string>
+    <string name="path_test">Path test</string>
+    <string name="res_coeff">Res coeff</string>
+    <string name="mass">Mass</string>
     <string name="test">Test</string>
-    <string name="optimize">optimize</string>
-    <string name="test_sequence">test sequence</string>
-    <string name="amount_of_vagons">amount of vagons</string>
+    <string name="optimize">Optimize</string>
+    <string name="test_sequence">Test sequence</string>
+    <string name="amount_of_vagons">Amount of vagons</string>
 
     <string name="about_text"><![CDATA[This app gives basic introduction into trains mechanic. It has the following features:<br><br><ol><li><b>Sequence</b>.<br><br><ul><li>Allows to create <i>custom sequence</i> with certain vagon count and certain mass, and then optimize they mutual arrangement to minimize risks while movement.</li><br><li><i>Random sequence</i> is the same, but creates random vagons count with random masses.</li></ul></li><br><li><b>Paths</b>. Choice of certain path from the list allows you to test train movement on the path. Also path info is available in the path menu.</li><br><li>The app supports english and russian languages.</li><br><li>Also you can write your questions and suggestions in the support.</li></ol>]]></string>
     <string name="support_text">Please, feel free to write your questions and suggestions to our support.</string>
@@ -45,5 +45,10 @@
     <string name="support_send_mail">Send mail</string>
     <string name="empty_mail_error">Mail body cannot be empty.</string>
     <string name="support_send_mail_title">Send email&#8230;</string>
+
+    <string name="path_info_name">Path name:</string>
+    <string name="path_info_length">Path length:</string>
+    <string name="path_info_length_value">%d km</string>
+    <string name="path_info_text">Line data shown on current railway path is shown as vertical data represented as changing array of numbers. To test any vagon movement on current path you can choose Path Test and testify your custom vagon.</string>
 
 </resources>

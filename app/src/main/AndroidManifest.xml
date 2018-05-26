@@ -59,6 +59,9 @@
         <activity
             android:name=".Activities.SupportActivity"
             android:label="@string/support" />
+        <activity
+            android:name=".Activities.PathInfoActivity"
+            android:label="@string/path_info" />
     </application>
 
 </manifest>
