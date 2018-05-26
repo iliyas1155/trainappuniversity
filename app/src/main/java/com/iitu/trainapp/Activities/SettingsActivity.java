@@ -33,12 +33,6 @@ public class SettingsActivity extends BaseActivity implements AdapterView.OnItem
         setOnClickListeners();
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        setTitle(R.string.settings);
-    }
-
     private void setOnClickListeners() {
         toAbout.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -2,12 +2,13 @@ package com.iitu.trainapp.Activities;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
+import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
@@ -42,6 +43,15 @@ public class BaseActivity extends AppCompatActivity {
         NavigationView navView = findViewById(R.id.nav_view);
         NavViewListener navViewListener = new NavViewListener(this, drawer);
         navView.setNavigationItemSelectedListener(navViewListener);
+
+        // Need to always refresh Activity's title, because of language changing.
+        try {
+            String label = getResources().getString(
+                    getPackageManager().getActivityInfo(getComponentName(), 0).labelRes);
+            getSupportActionBar().setTitle(label);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     public void setSupportActionBarIcon(){
