@@ -5,6 +5,7 @@
     <application
         android:name=".TrainApp"
         android:allowBackup="true"
+        android:largeHeap="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher"
@@ -61,6 +62,9 @@
             android:label="@string/support" />
         <activity
             android:name=".Activities.PathInfoActivity"
+            android:label="@string/path_info" />
+        <activity
+            android:name=".Activities.TutorialActivity"
             android:label="@string/path_info" />
     </application>
 

@@ -2,6 +2,7 @@ package com.iitu.trainapp.Activities;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -51,6 +52,12 @@ public class BaseActivity extends AppCompatActivity {
             getSupportActionBar().setTitle(label);
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
+        }
+
+        // Show tutorial if it's not finished.
+        if (!SharedPreferencesUtil.isTutorialShown(this)) {
+            Intent startTutorial = new Intent(this, TutorialActivity.class);
+            startActivity(startTutorial);
         }
     }
 
