@@ -20,95 +20,205 @@
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:padding="16dp"
+
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:weightSum="3">
+            android:padding="8dp"
+            android:layout_margin="16dp">
 
-            <LinearLayout
-                android:id="@+id/line1"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:layout_marginBottom="8dp"
-                android:orientation="horizontal"
-                android:padding="8dp"
-                android:background="@drawable/white_rounded_shape"
-                android:weightSum="3">
+                android:layout_height="wrap_content">
 
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                <LinearLayout
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/resonance_image" />
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:background="@drawable/white_rounded_shape"
+                    android:weightSum="3">
 
-                <TextView
-                    android:id="@+id/line1_text"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2"
-                    android:layout_marginLeft="10dp"
-                    android:gravity="center_vertical" />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/resonance_image" />
 
-            </LinearLayout>
+                    <TextView
+                        android:id="@+id/line1_text"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical" />
 
-            <LinearLayout
-                android:id="@+id/line2"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:orientation="horizontal"
-                android:padding="8dp"
-                android:background="@drawable/white_rounded_shape"
-                android:weightSum="3">
+                </LinearLayout>
 
-                <TextView
-                    android:id="@+id/line2_text"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2"
-                    android:layout_marginRight="10dp"
-                    android:gravity="center_vertical" />
+                <LinearLayout
+                    android:id="@+id/line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_below="@id/line1"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:background="@drawable/white_rounded_shape"
+                    android:weightSum="3">
 
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/freq_formula" />
-            </LinearLayout>
+                    <TextView
+                        android:id="@+id/line2_text"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical" />
 
-            <LinearLayout
-                android:id="@+id/line3"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:orientation="horizontal"
-                android:padding="8dp"
-                android:background="@drawable/white_rounded_shape"
-                android:weightSum="3">
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/freq_formula" />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/freq_formula" />
+                </LinearLayout>
 
-                <TextView
-                    android:id="@+id/line3_text"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2"
-                    android:layout_marginLeft="10dp"
-                    android:gravity="center_vertical" />
+                <LinearLayout
+                    android:id="@+id/line3"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_below="@+id/line2"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:background="@drawable/white_rounded_shape"
+                    android:weightSum="3">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/freq_formula" />
 
-            </LinearLayout>
-        </LinearLayout>
+                    <TextView
+                        android:id="@+id/line3_text"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line4"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_below="@+id/line3"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:background="@drawable/white_rounded_shape"
+                    android:weightSum="3">
+                    <TextView
+                        android:id="@+id/line4_text"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical" />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/resonance_speed_formula" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line5"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_below="@+id/line4"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:background="@drawable/white_rounded_shape"
+                    android:weightSum="3">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/energy_kinetic_formula" />
+                    <TextView
+                        android:id="@+id/line5_text"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line6"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_below="@+id/line5"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:background="@drawable/white_rounded_shape"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:id="@+id/line6_text"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical" />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/energy_potential_formula" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line7"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_below="@+id/line6"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:background="@drawable/white_rounded_shape"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/energy_equality_formula" />
+                    <TextView
+                        android:id="@+id/line7_text"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical" />
+
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
     </LinearLayout>
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"

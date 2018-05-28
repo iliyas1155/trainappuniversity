@@ -5,12 +5,23 @@ package com.iitu.trainapp.Calculations;
  */
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class DataCalculator {
     public static final double constPuasson = 0.3;
 
-    public static double calcResonanceSpeed(double izgib, double Ln, double circFrequency){
-        double resonanceSpeed = Math.pow(izgib,2)*(Ln*circFrequency) / (Math.PI*2);
+    public static List<Double> calcStopTime(double initSpeed, double maxMass, double avgMass){
+        double worstStopTime = 3.6*(initSpeed*maxMass) / (Math.PI*2);
+        double bestStopTime = 3.6*(initSpeed*avgMass) / (Math.PI*2);
+        List<Double> returnList = new ArrayList();
+        returnList.add(worstStopTime);
+        returnList.add(bestStopTime);
+        return returnList;
+    }
+
+    public static double calcResonanceSpeed(double circFrequency){
+        double defaultLn = 25;//m
+        double resonanceSpeed = 3.6*(defaultLn*circFrequency) / (Math.PI*2);
         return resonanceSpeed;
     }
 
@@ -85,8 +96,18 @@ public class DataCalculator {
         return fi;
     }
 
-    public static double calcZ(double h, double m, double c){
-        double z = m*c + h;
-        return z;
+    public static double calcZ(double h, double m, double v, double avg){
+        double maxVelocity = 1000;
+        double standHeightOfVagon = 10d;
+        double normalZ;
+
+//        if(avg > h){
+//            normalZ = avg - (vCoeff*h);
+//        }else{
+//            normalZ = h + (vCoeff*h);
+//        }
+        normalZ = m*v + h;
+
+        return normalZ;
     }
 }

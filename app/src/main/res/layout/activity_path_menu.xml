@@ -59,21 +59,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_above="@+id/what_we_do_button"
-                android:layout_marginBottom="16dp"
-                android:text="@string/path_test" />
-
-            <Button
-                android:id="@+id/what_we_do_button"
-                style="@android:style/Widget.Holo.Light.Button.Toggle"
-                android:background="@color/colorTransparent"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
                 android:layout_alignParentBottom="true"
                 android:layout_marginBottom="16dp"
-                android:text="@string/what_we_do" />
+                android:text="@string/path_test" />
 
             <TextView
                 android:id="@+id/path_name_in_menu"

@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="11dp"
                 android:ems="10"
                 android:hint="@string/amount_of_vagons"
                 android:inputType="number"
@@ -47,7 +47,7 @@
                 android:layout_below="@+id/amount_of_vagons"
                 android:layout_marginLeft="@dimen/card_side_margin"
                 android:layout_marginRight="@dimen/card_side_margin"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="11dp"
                 android:orientation="horizontal"
                 android:visibility="invisible">
 
@@ -70,16 +70,26 @@
                 android:id="@+id/rv_vagons_optimized"
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
+                android:layout_alignEnd="@+id/test_button"
                 android:layout_below="@+id/optimize_sequence_button"
-                android:layout_marginLeft="@dimen/card_side_margin"
-                android:layout_marginRight="@dimen/card_side_margin"
-                android:layout_marginTop="17dp"
+                android:layout_marginTop="15dp"
                 android:orientation="horizontal"
                 android:visibility="invisible">
 
             </android.support.v7.widget.RecyclerView>
+
+            <Button
+                android:id="@+id/test_button"
+                style="@android:style/Widget.Holo.Light.Button.Toggle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/rv_vagons_optimized"
+                android:layout_marginTop="15dp"
+                android:background="@color/colorTransparent"
+                android:text="@string/test"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:visibility="invisible" />
         </RelativeLayout>
     </LinearLayout>
     <android.support.design.widget.NavigationView

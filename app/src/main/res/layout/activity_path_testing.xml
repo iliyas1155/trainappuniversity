@@ -61,12 +61,12 @@
                     android:text="TextView" />
 
                 <EditText
-                    android:id="@+id/path_test_res_coeff_edit_text"
+                    android:id="@+id/path_test_speed_edit_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="22dp"
                     android:ems="10"
-                    android:hint="@string/res_coeff"
+                    android:hint="@string/speed"
                     android:inputType="numberDecimal" />
 
                 <EditText

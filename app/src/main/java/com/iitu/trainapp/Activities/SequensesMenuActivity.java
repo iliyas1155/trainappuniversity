@@ -7,10 +7,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.iitu.trainapp.Cards.Vagon;
 import com.iitu.trainapp.R;
+
+import java.util.List;
 
 public class SequensesMenuActivity extends BaseActivity {
     Button randomSequenseB, customSequenseB;
+    public static List<Vagon> vagons = null;
     TextView introTextView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

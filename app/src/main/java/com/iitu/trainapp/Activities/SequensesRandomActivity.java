@@ -23,7 +23,7 @@ public class SequensesRandomActivity extends BaseActivity {
     private static RecyclerView vagonsRv;
     private static RecyclerView vagonsOptimizedRv;
     Button optimizeButton;
-//    Button testButton;
+    Button testButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,14 +32,14 @@ public class SequensesRandomActivity extends BaseActivity {
         vagonsRv = findViewById(R.id.rv_vagons_random);
         vagonsOptimizedRv = findViewById(R.id.rv_vagons_optimized);
         optimizeButton = findViewById(R.id.optimize_sequence_button);
-//        testButton = findViewById(R.id.test_button);
+        testButton = findViewById(R.id.test_button);
 
         LinearLayoutManager llm1 = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         vagonsRv.setLayoutManager(llm1);
         LinearLayoutManager llm2 = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         vagonsOptimizedRv.setLayoutManager(llm2);
 
-        int randNum = (int) Math.round(Math.random()*10+1);
+        int randNum = (int) Math.round(Math.random()*10+1) + 5;
         initializeVagonsRecyclerView(randNum);
 
         optimizeButton.setOnClickListener(new View.OnClickListener() {
@@ -49,13 +49,13 @@ public class SequensesRandomActivity extends BaseActivity {
                 initializeOptimizedVagonsRecyclerView();
             }
         });
-//        testButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent myIntent = new Intent(SequensesRandomActivity.this, SequenceTestAcivity.class);
-//                SequensesRandomActivity.this.startActivity(myIntent);
-//            }
-//        });
+        testButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(SequensesRandomActivity.this, SequenceTestAcivity.class);
+                SequensesRandomActivity.this.startActivity(myIntent);
+            }
+        });
     }
 
     private List<Vagon> createOptimizedSequense() {
@@ -86,13 +86,14 @@ public class SequensesRandomActivity extends BaseActivity {
         vagonsRv.setAdapter(adapter);
         vagonsRv.setVisibility(View.VISIBLE);
         optimizeButton.setVisibility(View.VISIBLE);
-//        testButton.setVisibility(View.VISIBLE);
     }
 
     private void initializeOptimizedVagonsRecyclerView() {
         VagonsCardsAdapterNotSettable adapter = new VagonsCardsAdapterNotSettable(vagonsOptimized, true);
         vagonsOptimizedRv.setAdapter(adapter);
+        SequensesMenuActivity.vagons = vagonsOptimized;//setting chosen vagons
         vagonsOptimizedRv.setVisibility(View.VISIBLE);
+        testButton.setVisibility(View.VISIBLE);
     }
 
 }

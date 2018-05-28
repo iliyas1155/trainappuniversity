@@ -15,7 +15,6 @@ public class PathMenuActivity extends BaseActivity {
     Button pathInfoButton;
     Button formulasButton;
     Button pathTestButton;
-    Button whatWeDoButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +23,6 @@ public class PathMenuActivity extends BaseActivity {
         pathInfoButton = findViewById(R.id.path_info_button);
         formulasButton = findViewById(R.id.formulas_button);
         pathTestButton = findViewById(R.id.path_test_button);
-        whatWeDoButton = findViewById(R.id.what_we_do_button);
         pathNameTextView = findViewById(R.id.path_name_in_menu);
 
         pathNameTextView.setText(PathsActivity.getPath(PathsActivity.getChosenPathPosition()).name);
@@ -43,13 +41,6 @@ public class PathMenuActivity extends BaseActivity {
             }
         });
         formulasButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent myIntent = new Intent(PathMenuActivity.this, FormulasActivity.class);
-                PathMenuActivity.this.startActivity(myIntent);
-            }
-        });
-        whatWeDoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent myIntent = new Intent(PathMenuActivity.this, FormulasActivity.class);

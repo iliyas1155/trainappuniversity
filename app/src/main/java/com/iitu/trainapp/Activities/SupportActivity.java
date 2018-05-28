@@ -34,7 +34,7 @@ public class SupportActivity extends BaseActivity {
                 return;
             }
 
-            String recipient = "iliyas1155@gmail.com"; // todo: Change recipient if needed.
+            String recipient = "symbat9720@gmail.com"; // todo: Change recipient if needed.
             Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", recipient, null));
             emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[] {recipient}); // For Android 4.3 support.
             emailIntent.putExtra(Intent.EXTRA_SUBJECT, mailSubjectEt.getText().toString());

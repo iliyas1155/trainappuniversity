@@ -28,6 +28,7 @@ public class SequensesCustomActivity extends BaseActivity {
     private static RecyclerView vagonsOptimizedRv;
     EditText numberOfVagonsET;
     Button optimizeButton;
+    Button testButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +38,7 @@ public class SequensesCustomActivity extends BaseActivity {
         vagonsRv = findViewById(R.id.rv_vagons_settable);
         vagonsOptimizedRv = findViewById(R.id.rv_vagons_optimized);
         optimizeButton = findViewById(R.id.optimize_sequence_button);
+        testButton = findViewById(R.id.test_button);
 
         LinearLayoutManager llm1 = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         vagonsRv.setLayoutManager(llm1);
@@ -53,6 +55,13 @@ public class SequensesCustomActivity extends BaseActivity {
             public void onClick(View view) {
                 vagonsOptimized = createOptimizedSequense();
                 initializeOptimizedVagonsRecyclerView();
+            }
+        });
+        testButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(SequensesCustomActivity.this, SequenceTestAcivity.class);
+                SequensesCustomActivity.this.startActivity(myIntent);
             }
         });
     }
@@ -104,12 +113,8 @@ public class SequensesCustomActivity extends BaseActivity {
     private void initializeOptimizedVagonsRecyclerView() {
         VagonsCardsAdapterNotSettable adapter = new VagonsCardsAdapterNotSettable(vagonsOptimized, true);
         vagonsOptimizedRv.setAdapter(adapter);
+        SequensesMenuActivity.vagons = vagonsOptimized;//setting chosen vagons
         vagonsOptimizedRv.setVisibility(View.VISIBLE);
-    }
-
-    private void goToTesting(){
-        Intent myIntent = new Intent(SequensesCustomActivity.this, PathTestingActivity.class);
-        myIntent.putExtra("vagons", (Parcelable) vagons);
-        SequensesCustomActivity.this.startActivity(myIntent);
+        testButton.setVisibility(View.VISIBLE);
     }
 }
